@@ -14,3 +14,9 @@ $ composer install
 ```
 $ php index.php
 ```
+
+## UML
+
+![FizzBuzz](./docs/FizzBuzz.png)
+
+Written by PlantUML

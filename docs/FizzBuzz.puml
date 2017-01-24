@@ -1,0 +1,33 @@
+@startuml
+
+package "FizzBuzz" #DDDDDD {
+class Game {
+  -Player player
+  +play()
+}
+
+interface Player {
+  +String say()
+}
+interface Rules {
+  +String convert()
+}
+
+class RulesImpl {
+  +String convert()
+  -Bool isFizz()
+  -Bool isBuzz()
+  -Bool isFizzBuzz()
+}
+class PlayerImpl {
+  -Rules rules
+  +String say()
+}
+
+Game -> Player
+Player <|- PlayerImpl
+Rules <|-- RulesImpl
+PlayerImpl <.. Rules
+}
+
+@enduml
