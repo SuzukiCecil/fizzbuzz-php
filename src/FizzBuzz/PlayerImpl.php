@@ -16,7 +16,8 @@ class PlayerImpl implements Player
      * @Inject({"\FizzBuzz\RulesImpl"})
      * @param Rules $rules
      */
-    public function __construct(Rules $rules) {
+    public function __construct(Rules $rules)
+    {
         $this->rules = $rules;
     }
 
@@ -27,7 +28,8 @@ class PlayerImpl implements Player
      *
      * @return mixed
      */
-    public function say(int $number) {
+    public function say(int $number)
+    {
         echo $this->rules->convert($number)."\n";
     }
 }

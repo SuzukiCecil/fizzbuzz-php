@@ -14,9 +14,13 @@ class RulesImpl implements Rules
     public function convert(int $number)
     {
         if ($number !== 0) {
-            if ($this->isFizzBuzz($number)) return "FizzBuzz";
-            if ($this->isFizz($number)) return "Fizz";
-            if ($this->isBuzz($number)) return "Buzz";
+            if ($this->isFizzBuzz($number)) {
+                return "FizzBuzz";
+            } elseif ($this->isFizz($number)) {
+                return "Fizz";
+            } elseif ($this->isBuzz($number)) {
+                return "Buzz";
+            }
         }
 
         return (string) $number;
@@ -29,7 +33,8 @@ class RulesImpl implements Rules
      *
      * @return bool Fizzならtrue
      */
-    private function isFizz(int $number) {
+    private function isFizz(int $number)
+    {
         return $number % 3 === 0;
     }
 
@@ -40,7 +45,8 @@ class RulesImpl implements Rules
      *
      * @return bool Buzzならtrue
      */
-    private function isBuzz(int $number) {
+    private function isBuzz(int $number)
+    {
         return $number % 5 === 0;
     }
 
@@ -51,7 +57,8 @@ class RulesImpl implements Rules
      *
      * @return bool FizzBuzzならtrue
      */
-    private function isFizzBuzz(int $number) {
+    private function isFizzBuzz(int $number)
+    {
         return $this->isFizz($number) && $this->isBuzz($number);
     }
 }

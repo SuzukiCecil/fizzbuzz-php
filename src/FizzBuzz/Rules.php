@@ -2,7 +2,8 @@
 
 namespace FizzBuzz;
 
-interface Rules {
+interface Rules
+{
     /**
      * 数字を元にFizzBuzzゲームの言葉に変換
      *

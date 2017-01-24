@@ -3,7 +3,8 @@
 use Container\ContainerService;
 use FizzBuzz\Game;
 
-class Controller {
+class Controller
+{
     public function index()
     {
         $container = ContainerService::build();

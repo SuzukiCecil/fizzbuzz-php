@@ -4,7 +4,8 @@ namespace Container;
 
 use DI\ContainerBuilder;
 
-class ContainerService {
+class ContainerService
+{
     /**
      * DIコンテナを作成
      *
