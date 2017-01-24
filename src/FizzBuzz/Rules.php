@@ -11,5 +11,5 @@ interface Rules
      *
      * @return string Fizz|Buzz|FizzBuzz|数字
      */
-    public function convert(int $number);
+    public function convert(int $number): string;
 }

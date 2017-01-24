@@ -11,7 +11,7 @@ class RulesImpl implements Rules
      *
      * @return string Fizz|Buzz|FizzBuzz|数字
      */
-    public function convert(int $number)
+    public function convert(int $number): string
     {
         if ($number !== 0) {
             if ($this->isFizzBuzz($number)) {
@@ -33,7 +33,7 @@ class RulesImpl implements Rules
      *
      * @return bool Fizzならtrue
      */
-    private function isFizz(int $number)
+    private function isFizz(int $number): bool
     {
         return $number % 3 === 0;
     }
@@ -45,7 +45,7 @@ class RulesImpl implements Rules
      *
      * @return bool Buzzならtrue
      */
-    private function isBuzz(int $number)
+    private function isBuzz(int $number): bool
     {
         return $number % 5 === 0;
     }
@@ -57,7 +57,7 @@ class RulesImpl implements Rules
      *
      * @return bool FizzBuzzならtrue
      */
-    private function isFizzBuzz(int $number)
+    private function isFizzBuzz(int $number): bool
     {
         return $this->isFizz($number) && $this->isBuzz($number);
     }
