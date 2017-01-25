@@ -6,6 +6,7 @@
 ## Installation
 
 ```
+$ git clone git@github.com:masa0221/fizzbuzz-php.git && cd fizzbuzz-php
 $ composer install
 ```
 
