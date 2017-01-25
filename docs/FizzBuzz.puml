@@ -2,32 +2,32 @@
 
 package "FizzBuzz" #DDDDDD {
 class Game {
-  -Player player
+  -PlayerInterface player
   +play()
 }
 
-interface Player {
+interface PlayerInterface {
   +String say()
 }
-interface Rules {
+interface RulesInterface {
   +String convert()
 }
 
-class RulesImpl {
+class Rules {
   +String convert()
   -Bool isFizz()
   -Bool isBuzz()
   -Bool isFizzBuzz()
 }
-class PlayerImpl {
-  -Rules rules
+class Player {
+  -RulesInterface rules
   +String say()
 }
 
-Game -> Player
-Player <|- PlayerImpl
-Rules <|-- RulesImpl
-PlayerImpl <.. Rules
+Game -> PlayerInterface
+PlayerInterface <|- Player
+RulesInterface <|-- Rules
+Player <.. RulesInterface
 }
 
 @enduml

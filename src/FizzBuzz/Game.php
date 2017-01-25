@@ -5,14 +5,14 @@ namespace FizzBuzz;
 class Game
 {
     /**
-     * @var \FizzBuzz\PlayerImpl
-     * @Inject
+     * @var \FizzBuzz\PlayerInterface
+     * @Inject("\FizzBuzz\Player")
      */
     private $player;
 
 //    @Inject のアノテーションがあれば自動的に
 //    フィールドインジェクションされるためコンストラクタは要らない
-//    public function __construct(Player $player)
+//    public function __construct(PlayerInterface $player)
 //    {
 //        $this->player = $player;
 //    }

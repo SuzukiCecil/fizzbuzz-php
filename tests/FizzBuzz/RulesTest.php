@@ -2,9 +2,9 @@
 
 namespace Tests\FizzBuzz;
 
-use FizzBuzz\RulesImpl;
+use FizzBuzz\Rules;
 
-class RulesImplTest extends \PHPUnit_Framework_TestCase
+class RulesTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * convertのテストパターン
@@ -28,13 +28,13 @@ class RulesImplTest extends \PHPUnit_Framework_TestCase
      *
      * @dataProvider convertProvider
      *
-     * @param int $number RuleImpl#convertに渡す数字
+     * @param int $number Rule#convertに渡す数字
      * @param string $expected 期待値
      */
     public function convert($number, $expected)
     {
-        $RulesImpl = new RulesImpl();
+        $Rules = new Rules();
 
-        $this->assertSame($expected, $RulesImpl->convert($number));
+        $this->assertSame($expected, $Rules->convert($number));
     }
 }
